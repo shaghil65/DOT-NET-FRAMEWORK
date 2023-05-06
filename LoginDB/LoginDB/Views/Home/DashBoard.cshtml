@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DashBoard";
+}
+
+<h2>DashBoard</h2>
+
+@if (Session["user"] == null)
+{
+    @Html.ActionLink("Goto Login", "index", "home");
+}
+else
+{
+    <p>Welcome @Session["user"]!</p>
+    @Html.ActionLink("Log Out", "LogOut", "home");
+}
+
+
+
+@*Cookies code
+    @if (Request.Cookies["user"] == null)
+    {
+        @Html.ActionLink("Goto Login","index","home");
+    }
+    else
+    {
+        <p>Welcome @Request.Cookies["user"].Value !</p>
+    }*@
+

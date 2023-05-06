@@ -1,0 +1,30 @@
+﻿@model List<classtwo.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+            </tr>
+        </thead>
+        @{
+            foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+                        @item.studentId
+                    </td>
+                    <td>
+                        @item.studentName
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
